@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="uz"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f7b6c">
+<meta name="color-scheme" content="light dark">
+<title>Nyuton qonunlari — STEAM · 9-sinf</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8E%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#eef8f5;--cd:#fff;--tx:#12302a;--ac:#0f7b6c;--ac2:#dff3ee;--ok:#1b8a4c;--no:#c93636;--bd:#c4e3dc;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b1d19;--cd:#132925;--tx:#e3f6f1;--ac:#4fd1b8;--ac2:#1a3d36;--bd:#2b5a50;--on:#0b1d19}}
+:root[data-theme=dark]{--bg:#0b1d19;--cd:#132b25;--tx:#e3f6f1;--ac:#4fd1b8;--ac2:#1a3d36;--bd:#2b5a50;--on:#0b1d19}
+:root[data-theme=light]{--bg:#eef8f5;--cd:#fff;--tx:#12302a;--ac:#0f7b6c;--ac2:#dff3ee;--bd:#c4e3dc;--on:#fff}
+*{box-sizing:border-box}html{scroll-padding-top:70px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--tx);-webkit-tap-highlight-color:transparent;overflow-wrap:anywhere}
+header{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:10px max(14px,env(safe-area-inset-right,0px)) 10px max(14px,env(safe-area-inset-left,0px));background:var(--cd);border-bottom:1px solid var(--bd)}
+h1{font-size:18px;margin:0;line-height:1.3}h2{margin:.2em 0 .5em;font-size:24px}h3{margin:.8em 0 .3em;font-size:19px}
+nav{display:flex;gap:6px;padding:8px 12px;overflow-x:auto;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+button,input,select,textarea{font:inherit;color:var(--tx)}
+button{cursor:pointer;border:1px solid var(--bd);background:var(--ac2);padding:8px 14px;border-radius:10px;min-height:42px;white-space:nowrap;touch-action:manipulation;-webkit-appearance:none;appearance:none}
+button:hover{border-color:var(--ac)}
+button.on,button.p{background:var(--ac);color:var(--on);border-color:var(--ac)}
+button:disabled{opacity:.75;cursor:default}
+main{max-width:960px;margin:0 auto;padding:6px 12px 48px}
+section{display:none;background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:18px}
+section.on{display:block}
+.box{background:var(--ac2);border-left:5px solid var(--ac);border-radius:10px;padding:12px 14px;margin:12px 0}
+.formula{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;margin:10px 0;font:600 18px/1.6 system-ui,sans-serif;overflow-x:auto}
+.formula small{display:block;font:14px/1.5 system-ui,sans-serif;opacity:.85;margin-top:4px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0}
+.lab{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+@media(max-width:700px){.lab{grid-template-columns:1fr}h2{font-size:21px}}
+label.sl{display:block;margin:8px 0}
+label.sl b{color:var(--ac)}
+input[type=range]{width:100%;accent-color:var(--ac);height:28px}
+input[type=number]{padding:8px;border-radius:8px;border:1px solid var(--bd);background:var(--bg);width:130px;min-height:42px}
+canvas{display:block;width:100%;max-width:380px;height:auto;margin:0 auto;border-radius:12px;background:var(--bg);border:1px solid var(--bd)}
+.res{font:600 17px/1.6 system-ui,sans-serif;background:var(--cd);border:1px dashed var(--ac);border-radius:12px;padding:10px 12px;margin-top:8px}
+.opt{display:block;width:100%;text-align:left;margin:6px 0;white-space:normal;min-height:48px}
+.ok{background:var(--ok)!important;color:#fff!important;border-color:var(--ok)!important}
+.no{background:var(--no)!important;color:#fff!important;border-color:var(--no)!important}
+.fb{font-weight:600;min-height:1.6em;margin:8px 0}
+.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac);transition:width .3s}
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pairs button{white-space:normal;text-align:center;min-height:56px}
+.pairs>div{display:grid;gap:8px;align-content:start}
+.hero{background:linear-gradient(120deg,#0f7b6c,#2f6fd6);color:#fff;border-radius:14px;padding:16px;margin-bottom:12px}
+.hero h2{color:#fff;margin:0 0 6px}
+.steam{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.steam span{background:var(--ac2);border:1px solid var(--bd);border-radius:999px;padding:4px 12px;font-weight:600;font-size:14px}
+.me{font-weight:600;color:var(--ac)}
+.lgbox{width:100%;max-width:440px;background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:20px}
+.lgbox input{width:100%;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);font-size:16px;margin-top:4px}
+#lg{display:none}body.guest #lg{display:flex;justify-content:center;padding:24px 12px}
+body.guest nav,body.guest main{display:none}
+.tw{overflow-x:auto;margin-top:10px}
+#rtab th,#rtab td{padding:8px;border-top:1px solid var(--bd);white-space:nowrap}#rtab th{background:var(--ac2)}
+table{width:100%;border-collapse:collapse;font-size:16px}th,td{text-align:left;padding:8px;border-top:1px solid var(--bd)}th{background:var(--ac2)}
+@media(max-width:480px){h1{font-size:16px}section{padding:14px}.pairs{grid-template-columns:1fr}}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style></head><body class="guest">
+<header><h1>🍎 Nyuton qonunlari · STEAM · 9-sinf</h1><span class="me" id="me"></span><b>⭐ <span id="st">0</span></b><button id="lo" hidden>🚪 Chiqish</button></header>
+
+<div id="lg"><div class="lgbox">
+<h2>👋 Xush kelibsiz!</h2>
+<p>Darsga kirish uchun familiyangiz va ismingizni yozing. Natijangiz oʻqituvchining jadvaliga shu nom bilan tushadi.</p>
+<label class="sl">Familiya<input type="text" id="lf" maxlength="40" autocomplete="family-name" placeholder="Masalan: Karimov"></label>
+<label class="sl">Ism<input type="text" id="li" maxlength="40" autocomplete="given-name" placeholder="Masalan: Ali"></label>
+<p class="fb" id="lmsg"></p>
+<button class="p" id="lgo">Kirish ➜</button>
+</div></div>
+
+<nav id="nv"></nav>
+<main>
+
+<!-- 1. KIRISH -->
+<section id="s0" class="on">
+<div class="hero"><h2>Nega jismlar harakatini oʻzgartiradi?</h2><p style="margin:0">Futbol toʻpi nega tepilgandan keyin toʻxtaydi? Avtomobil nega tormozda sekin toʻxtaydi? Liftda turganingizda nega ogʻirlik oʻzgaradi? Bu savollarga Nyuton qonunlari javob beradi.</p></div>
+<div class="steam"><span>🔬 Fan</span><span>💻 Texnologiya</span><span>🛠 Muhandislik</span><span>🎨 San’at</span><span>📐 Matematika</span></div>
+<h3>🎯 Darsning maqsadi</h3>
+<ul>
+<li>Nyutonning uch qonunini ta’riflash va misollar bilan tushuntirish;</li>
+<li>Simulyatorda kuch, massa va tezlanish oʻrtasidagi bogʻliqlikni tekshirish;</li>
+<li>Avtomobil tormozini loyihalash (muhandislik masalasi) va hisob-kitob qilish.</li>
+</ul>
+<div class="box"><b>Qiziqarli fakt:</b> Nyuton 1687-yilda “Natural falsafaning matematik asoslari” asarini nashr etgan. Unda uchta harakat qonuni va butun olam tortishish qonuni bayon qilingan.</div>
+<p><b>Oʻz-oʻzini tekshiring:</b> jism tashqi kuch taʼsir etmasa, qanday harakat qiladi?</p>
+<div class="row"><button class="opt" data-q="a">Doim toʻxtaydi</button><button class="opt" data-q="b">Tinch yoki tekis toʻgʻri chiziqli harakatda qoladi</button><button class="opt" data-q="c">Doim tezlashadi</button></div>
+<p class="fb" id="f0"></p>
+</section>
+
+<!-- 2. NAZARIYA -->
+<section id="s1">
+<h2>📖 Nyuton qonunlari</h2>
+<h3>1-qonun: inersiya qonuni</h3>
+<div class="box">Agar jismga boshqa jismlar taʼsir etmasa (yoki taʼsirlari muvozanatlashgan boʻlsa), jism tinch holatda yoki tekis toʻgʻri chiziqli harakatda boʻladi.</div>
+<p><b>Misol:</b> avtobus keskin toʻxtaganda yoʻlovchi oldinga egiladi — uning tezligi saqlanishga intiladi.</p>
+<h3>2-qonun: F = m·a</h3>
+<div class="formula">F = m · a<small>F — teng taʼsir etuvchi kuch (N), m — massa (kg), a — tezlanish (m/s²). 1 N = 1 kg · m/s².</small></div>
+<p>Bir xil kuch taʼsirida massasi katta jism kichik tezlanish oladi. Og‘irlik kuchi: <b>P = m·g</b>, bu yerda g ≈ 10 m/s².</p>
+<h3>3-qonun: ta’sir va aks ta’sir</h3>
+<div class="box">Ikki jism bir-biriga taʼsir etganda, ular bir-biriga <b>teng kattalikdagi</b> va <b>qarama-qarshi yoʻnalishdagi</b> kuchlar bilan taʼsir qiladi.</div>
+<p><b>Misol:</b> ot aravani tortadi, arava ham otni teskari yoʻnalishda tortadi. Ikkala kuch teng.</p>
+<h3>Ishqalanish kuchi</h3>
+<div class="formula">F<sub>ish</sub> = μ · N = μ · m · g<small>μ — ishqalanish koeffitsiyenti, N — tayanch reaksiya kuchi. Ishqalanish harakatga qarshi yoʻnalgan.</small></div>
+<p><b>Oʻz-oʻzini tekshiring:</b> ot aravani tortadi. Aravaning otni tortish kuchi qanday?</p>
+<div class="row"><button class="opt" data-q="a">Kuch nolga teng</button><button class="opt" data-q="b">Otning tortish kuchiga teng va qarama-qarshi</button><button class="opt" data-q="c">Otning kuchidan katta</button></div>
+<p class="fb" id="f1"></p>
+</section>
+
+<!-- 3. FAN / TEXNOLOGIYA: SIMULYATOR -->
+<section id="s2">
+<h2>🔬💻 Simulyator: aravacha</h2>
+<p>Aravachaga kuch qoʻllang, massasini va ishqalanishini oʻzgartiring. Grafikda tezlik vaqtga qarab qanday oʻzgarishini kuzating. (g = 10 m/s² deb olingan.)</p>
+<div class="lab">
+<div>
+<canvas id="cvS" width="300" height="130" role="img" aria-label="Aravacha simulyatsiyasi"></canvas>
+<canvas id="cvG" width="300" height="130" role="img" aria-label="Tezlik grafigi" style="margin-top:10px"></canvas>
+<div class="row"><button class="p" id="push">▶ Kuchni yoqish</button><button id="sreset">↺ Qayta</button></div>
+</div>
+<div>
+<label class="sl">Qoʻllanilgan kuch F: <b id="vF"></b> N<input type="range" id="sF" min="0" max="200" step="5" value="60" aria-label="Kuch"></label>
+<label class="sl">Massa m: <b id="vM"></b> kg<input type="range" id="sM" min="1" max="50" step="1" value="10" aria-label="Massa"></label>
+<label class="sl">Ishqalanish μ: <b id="vU"></b><input type="range" id="sU" min="0" max="0.8" step="0.05" value="0.2" aria-label="Ishqalanish"></label>
+<div class="res" id="sres"></div>
+</div>
+</div>
+<div class="box"><b>Tajriba vazifasi:</b> ishqalanishni 0 ga keltiring va kuchni oʻchiring. Aravacha qanday harakat qiladi? Bu Nyutonning qaysi qonuniga mos?</div>
+<p class="fb" id="f2"></p>
+</section>
+
+<!-- 4. JUFT KUCHLAR (NYUTON 3) -->
+<section id="s3">
+<h2>🧲 Juft kuchlar: 3-qonun va 2-qonun</h2>
+<p>Ikki jism bir-biriga bir xil kuch bilan taʼsir etadi. Massalarni oʻzgartirib, tezlanishlar qanday oʻzgarishini kuzating.</p>
+<div class="lab">
+<div>
+<canvas id="cvJ" width="300" height="140" role="img" aria-label="Juft kuchlar sxemasi"></canvas>
+</div>
+<div>
+<label class="sl">Birinchi jism massasi m₁: <b id="vm1"></b> kg<input type="range" id="sm1" min="1" max="20" step="1" value="2" aria-label="m1"></label>
+<label class="sl">Ikkinchi jism massasi m₂: <b id="vm2"></b> kg<input type="range" id="sm2" min="1" max="20" step="1" value="10" aria-label="m2"></label>
+<div class="res" id="jres"></div>
+</div>
+</div>
+<div class="box">Oʻz-oʻzini tekshiring: F₁₂ = F₂₁ boʻlsa-yu, m₁ ≠ m₂ boʻlsa, qaysi jismning tezlanishi katta boʻladi?</div>
+<div class="row" id="jq"></div>
+<p class="fb" id="f3"></p>
+</section>
+
+<!-- 5. MUHANDISLIK -->
+<section id="s4">
+<h2>🛠 Muhandislik: avtomobil tormozi</h2>
+<p>Muhandis vazifasi: avtomobil <b>v</b> tezlikda harakatlanayotganda <b>s</b> masofada toʻxtashi kerak. Kerakli tormoz kuchi va ishqalanish bilan tekshiring.</p>
+<div class="lab">
+<div>
+<label class="sl">Tezlik v: <b id="vv"></b> km/s<input type="range" id="sv" min="20" max="120" step="5" value="72" aria-label="Tezlik"></label>
+<label class="sl">Toʻxtash masofasi s: <b id="vs"></b> m<input type="range" id="ss" min="10" max="120" step="5" value="50" aria-label="Masofa"></label>
+<label class="sl">Avtomobil massasi m: <b id="vmm"></b> kg<input type="range" id="smm" min="800" max="2000" step="100" value="1200" aria-label="Massa"></label>
+<label class="sl">Yoʻl ishqalanishi μ: <b id="vmu"></b><input type="range" id="smu" min="0.2" max="0.9" step="0.05" value="0.7" aria-label="Ishqalanish"></label>
+</div>
+<div>
+<canvas id="cvE" width="300" height="130" role="img" aria-label="Tormoz sxemasi"></canvas>
+<div class="res" id="eres"></div>
+</div>
+</div>
+<div class="box"><b>Muhandislik xulosasi:</b> maksimal ishqalanish kuchi F_max = μ·m·g. Tormoz xavfsiz boʻlishi uchun kerakli kuch F = m·v²/(2s) shu chegaradan oshmasligi kerak.</div>
+<h3>🧩 Loyihalash vazifasi</h3>
+<p>Massa va ishqalanish oʻzgarmasa (μ = 0,7), 72 km/s tezlikda avtomobil xavfsiz toʻxtashi uchun eng kichik masofa necha metr boʻlishi kerak?</p>
+<div class="row"><input type="number" id="eans" step="any" inputmode="decimal" aria-label="Masofa (m)"> m <button class="p" id="echk">Tekshirish</button></div>
+<p class="fb" id="ef"></p>
+</section>
+
+<!-- 6. SAN'AT -->
+<section id="s5">
+<h2>🎨 San’at: harakat va muvozanat</h2>
+<p>Amerikalik haykaltarosh Aleksandr Kalder yaratgan harakatlanuvchi haykallar (mobillar) havo oqimi va muvozanat tufayli harakatlanadi. Bu yerda ham kuchlar muvozanati va inersiya qonunlari namoyon boʻladi.</p>
+<div class="box"><b>Ijodiy vazifa:</b> bitta sahna tanlang (mashina, sport, bolalar oʻyini, kosmik kema) va uning rasmida kuchlarni strelkalar bilan belgilang: og‘irlik, tayanch reaksiya kuchi, tortish va ishqalanish kuchlari.</div>
+<p><b>Oʻz-oʻzini tekshiring:</b> lift yuqoriga tezlanish bilan koʻtarilayotganda, lift polining odamga bosim kuchi qanday?</p>
+<div class="row"><button class="opt" data-q="a">Ogʻirlikdan kichik</button><button class="opt" data-q="b">Ogʻirlikdan katta</button></div>
+<p class="fb" id="f4"></p>
+</section>
+
+<!-- 7. MATEMATIKA -->
+<section id="s6">
+<h2>📐 Matematika: hisoblash</h2>
+<div class="formula">F = m · a<small>Masala: m = 1200 kg massali avtomobil a = 3 m/s² tezlanish oladi. Kuchni toping (N).</small></div>
+<div class="row"><input type="number" id="c1" step="any" inputmode="decimal" aria-label="Kuch (N)"> N <button class="p" id="cc1">Tekshirish</button></div>
+<p class="fb" id="fc1"></p>
+<div class="formula">s = v² / (2a)<small>Masala: tezlik v = 20 m/s, tormozlanish tezlanishi a = 4 m/s² boʻlsa, toʻxtash masofasi necha metr?</small></div>
+<div class="row"><input type="number" id="c2" step="any" inputmode="decimal" aria-label="Masofa (m)"> m <button class="p" id="cc2">Tekshirish</button></div>
+<p class="fb" id="fc2"></p>
+</section>
+
+<!-- 8. TEST -->
+<section id="s7">
+<h2>📝 Bilimni sinash</h2>
+<div class="bar"><i id="pb" style="width:0"></i></div>
+<p id="qn"></p><p><b id="qt"></b></p><div id="qo"></div><p class="fb" id="f5"></p>
+<button class="p" id="nx" hidden>Keyingisi ➜</button>
+</section>
+
+<!-- 9. O'YIN -->
+<section id="s8">
+<h2>🎮 O‘yin: qonun va misol</h2>
+<p>Chap tomondagi tushunchani oʻng tomondagi toʻgʻri taʼrif bilan juftlang. Har bir juftlik uchun 1 ⭐.</p>
+<div class="pairs" id="pr"></div>
+<p class="fb" id="f6"></p>
+<button id="rp">🔄 Yangi o‘yin</button>
+</section>
+
+<!-- 10. XULOSA -->
+<section id="s9">
+<h2>🏁 Xulosa</h2>
+<table>
+<tr><th>Qonun</th><th>Mazmuni</th><th>Formula</th></tr>
+<tr><td>1-qonun (inersiya)</td><td>Taʼsir boʻlmasa, tezlik oʻzgarmaydi</td><td>—</td></tr>
+<tr><td>2-qonun</td><td>Tezlanish kuchga toʻgʻri, massaga teskari proporsional</td><td>F = m·a</td></tr>
+<tr><td>3-qonun</td><td>Ta’sir va aks ta’sir teng va qarama-qarshi</td><td>F₁₂ = −F₂₁</td></tr>
+</table>
+<div class="box" style="margin-top:14px"><b>Uyga vazifa:</b> 1,5 t massali avtomobil 2 m/s² tezlanish bilan harakatlanmoqda. Kerakli kuchni hisoblang (javob: 3000 N). Keyin shu avtomobil 25 m/s tezlikda toʻxtash uchun tezlanishni (a = v²/(2s), s = 50 m) hisoblang (javob: 6,25 m/s²).</div>
+<p>Yigʻilgan yulduzlar: <b id="fs">0</b> ⭐</p>
+<div class="box" id="sbox"><b>Natijani yuborish:</b> bu tugmani faqat bir marta bosing. Birinchi yuborilgan natija saqlanadi, keyingi urinishlar jadvalni oʻzgartirmaydi.</div>
+<div class="row"><button class="p" id="sub">📤 Natijani yuborish</button><span id="subst"></span></div>
+<div class="row"><button id="rs">🔁 Boshidan boshlash (mashq)</button></div>
+<p class="fb" id="rsm"></p>
+</section>
+
+<!-- 11. NATIJALAR -->
+<section id="s10">
+<h2>📊 Natijalar</h2>
+<p id="rnote"></p>
+<div class="row"><button id="rload">🔄 Yangilash</button></div>
+<div class="tw"><table id="rtab"><thead><tr><th>№</th><th>Familiya</th><th>Ism</th><th>Ball ⭐</th><th>Test</th><th>Muhandislik</th><th>O‘yin</th><th>Hisob</th><th>Sana</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+</main>
+
+<script>
+/* ===== SOZLASH: Google Apps Script veb-ilova manzili ===== */
+const RESULTS_URL="";   // masalan: "https://script.google.com/macros/s/XXXX/exec"
+
+const $=s=>document.querySelector(s);
+const SEC=["Kirish","Nazariya","Simulyator","Juft kuch","Muhandislik","San’at","Matematika","Test","O‘yin","Xulosa","Natijalar"];
+const de=document.documentElement;
+const NAME_RE=/^[\p{L}ʻʼ'‘’\- ]{2,40}$/u;
+const TOTAL_Q=8,TOTAL_P=4,G=10;
+
+let ME=null,P=null;
+const blank=()=>({stars:0,quiz:null,pairs:0,calc:0,eng:false,saved:false,done:{}});
+const norm=s=>s.trim().replace(/\s+/g," ");
+const keyOf=(f,i)=>(f+" "+i).toLowerCase();
+const fmt=x=>isFinite(x)?(+x.toPrecision(3)).toString().replace(".",","):"—";
+const sh=a=>a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]);
+const cssVar=n=>getComputedStyle(de).getPropertyValue(n).trim();
+
+/* ---------- Kirish ---------- */
+function login(){
+  const f=norm($("#lf").value),i=norm($("#li").value);
+  if(!NAME_RE.test(f)||!NAME_RE.test(i)){$("#lmsg").textContent="Familiya va ismni toʻliq yozing (kamida 2 harf, faqat harflar).";return}
+  ME={fam:f,ism:i,key:keyOf(f,i)};
+  try{P=Object.assign(blank(),JSON.parse(localStorage.getItem("nk_p_"+ME.key))||{})}catch(e){P=blank()}
+  $("#me").textContent="👤 "+ME.fam+" "+ME.ism;
+  $("#lmsg").textContent="";
+  document.body.classList.remove("guest");
+  $("#lo").hidden=false;
+  resetPractice();
+  updStars();refreshSubmitUI();go(0);
+}
+$("#lgo").onclick=login;
+["#lf","#li"].forEach(s=>$(s).addEventListener("keydown",e=>{if(e.key=="Enter")login()}));
+$("#lo").onclick=()=>{ME=null;P=null;document.body.classList.add("guest");$("#me").textContent="";$("#lo").hidden=true;
+  $("#lf").value="";$("#li").value="";$("#lmsg").textContent="";$("#st").textContent="0";$("#fs").textContent="0";$("#lf").focus()};
+
+const saveP=()=>{if(!ME)return;try{localStorage.setItem("nk_p_"+ME.key,JSON.stringify(P))}catch(e){}};
+function updStars(){$("#st").textContent=P?P.stars:0;$("#fs").textContent=P?P.stars:0}
+const add=(k,n)=>{if(!P||P.done[k])return;P.done[k]=1;P.stars+=n;updStars();saveP()};
+
+/* ---------- Navigatsiya ---------- */
+let curSec=0;
+const go=i=>{
+  curSec=i;
+  document.querySelectorAll("main>section").forEach((s,j)=>s.classList.toggle("on",i==j));
+  document.querySelectorAll("#nv button").forEach((b,j)=>b.classList.toggle("on",i==j));
+  window.scrollTo(0,0);
+  if(i==10)loadRes();
+};
+SEC.forEach((t,i)=>{const b=document.createElement("button");b.textContent=(i+1)+". "+t;b.onclick=()=>go(i);$("#nv").append(b)});
+
+/* ---------- Kun/tun ---------- */
+let tm="";try{tm=localStorage.getItem("nk_t")||""}catch(e){}
+if(tm)de.dataset.theme=tm;
+const dark=()=>de.dataset.theme?de.dataset.theme=="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+const tb=document.createElement("button");tb.id="th";tb.setAttribute("aria-label","Kun/tun rejimi");
+const setT=()=>{tb.textContent=dark()?"☀️":"🌙";tb.title=dark()?"Kun rejimi":"Tun rejimi"};
+tb.onclick=()=>{const m=dark()?"light":"dark";de.dataset.theme=m;try{localStorage.setItem("nk_t",m)}catch(e){}setT()};
+$("header").append(tb);setT();
+
+/* ---------- Savollar (oddiy tekshirish) ---------- */
+function quick(sel,fb,correct,okMsg,noMsg,key,pts){
+  document.querySelectorAll(sel).forEach(b=>b.onclick=()=>{
+    const ok=b.dataset.q==correct;
+    document.querySelectorAll(sel).forEach(x=>{x.disabled=true;if(x.dataset.q==correct)x.classList.add("ok")});
+    if(!ok)b.classList.add("no");
+    $(fb).textContent=ok?"✅ "+okMsg+(pts?" +"+pts+" ⭐":""):"❌ "+noMsg;
+    if(ok&&pts)add(key,pts);
+  });
+}
+quick("#s0 [data-q]","#f0","b","To‘g‘ri! Bu inersiya qonuni (Nyutonning 1-qonuni).","Taʼsir boʻlmasa, jism tezligini saqlaydi — toʻxtamaydi va tezlanmaydi.","q0",1);
+quick("#s1 [data-q]","#f1","b","To‘g‘ri! Ta’sir va aks ta’sir kuchlari teng va qarama-qarshi (3-qonun).","Ot va arava bir-biriga teng kuch bilan taʼsir etadi (3-qonun).","q1",1);
+quick("#s5 [data-q]","#f4","b","To‘g‘ri! Yuqoriga tezlanish bilan liftda bosim kuchi ogʻirlikdan katta boʻladi.","Yuqoriga tezlanish bo‘lsa, tayanch kuchi og‘irlikdan katta bo‘ladi (F = m(g + a)).","q5",1);
+
+/* ---------- Simulyator: aravacha ---------- */
+const S={x:0,v:0,t:0,hist:[],run:false,pushOn:false,last:0};
+function simStep(dt){
+  const F=+$("#sF").value,m=+$("#sM").value,mu=+$("#sU").value;
+  const Fapp=S.pushOn?F:0,fr=mu*m*G;
+  let a;
+  if(S.v>0.0005){a=(Fapp-fr)/m}
+  else{a=Fapp>fr?(Fapp-fr)/m:0}
+  S.v+=a*dt;if(S.v<0)S.v=0;
+  S.x+=S.v*dt;S.t+=dt;
+  S.hist.push([S.t,S.v]);if(S.hist.length>400)S.hist.shift();
+  S.a=a;S.fr=(S.v>0.0005||Fapp>fr)?fr:Math.min(Fapp,fr);
+}
+function drawSim(){
+  const c=$("#cvS"),g=c.getContext("2d");
+  g.clearRect(0,0,c.width,c.height);
+  g.strokeStyle=cssVar("--bd");g.lineWidth=2;g.beginPath();g.moveTo(10,100);g.lineTo(290,100);g.stroke();
+  const px=20+((S.x%30)/30)*240;
+  g.fillStyle=cssVar("--ac");g.fillRect(px-22,58,44,36);
+  g.fillStyle=cssVar("--on");g.font="bold 12px system-ui";g.textAlign="center";g.fillText(+$("#sM").value+" kg",px,80);
+  g.textAlign="start";
+  if(S.pushOn){g.strokeStyle="#d6336c";g.lineWidth=3;g.beginPath();g.moveTo(px-26,40);g.lineTo(px-70,40);g.stroke();g.beginPath();g.moveTo(px-70,40);g.lineTo(px-62,35);g.moveTo(px-70,40);g.lineTo(px-62,45);g.stroke();g.lineWidth=1;g.fillStyle="#d6336c";g.fillText("F",px-80,36)}
+  g.fillStyle=cssVar("--tx");g.font="11px system-ui";g.fillText("v = "+fmt(S.v)+" m/s",8,16);
+  // grafik
+  const gc=$("#cvG"),gg=gc.getContext("2d");
+  gg.clearRect(0,0,gc.width,gc.height);
+  gg.strokeStyle=cssVar("--bd");gg.beginPath();gg.moveTo(30,10);gg.lineTo(30,118);gg.lineTo(292,118);gg.stroke();
+  gg.fillStyle=cssVar("--tx");gg.font="10px system-ui";gg.fillText("v",12,14);gg.fillText("t (10 s)",236,128);
+  const tEnd=S.t,tStart=Math.max(0,tEnd-10);
+  const vmax=Math.max(5,...S.hist.map(h=>h[1]));
+  gg.strokeStyle=cssVar("--ac");gg.lineWidth=2;gg.beginPath();
+  let first=true;
+  S.hist.forEach(([t,v])=>{if(t<tStart)return;const x=30+(t-tStart)/10*262,y=118-(v/vmax)*100;if(first){gg.moveTo(x,y);first=false}else gg.lineTo(x,y)});
+  gg.stroke();gg.lineWidth=1;
+  $("#vF").textContent=$("#sF").value;$("#vM").textContent=$("#sM").value;$("#vU").textContent=(+$("#sU").value).toFixed(2);
+  $("#sres").innerHTML="Tezlanish: <b>a = "+fmt(S.a)+" m/s²</b><br>Tezlik: <b>"+fmt(S.v)+" m/s</b><br>Ishqalanish kuchi: <b>"+fmt(+$("#sU").value*(+$("#sM").value)*G)+" N</b>";
+}
+let simRunning=true;
+$("#push").onclick=()=>{S.pushOn=!S.pushOn;$("#push").textContent=S.pushOn?"⏸ Kuchni oʻchirish":"▶ Kuchni yoqish";$("#push").classList.toggle("p",S.pushOn);
+  if(S.pushOn){add("sim",1);$("#f2").textContent="⭐ Kuch qoʻllandi: tezlanish 2-qonunga koʻra vujudga keldi. +1 ⭐"}
+  else{$("#f2").textContent="Kuch olib tashlandi. Ishqalanish boʻlsa, aravacha sekinlashadi (1-qonun va ishqalanish)."}};
+$("#sreset").onclick=()=>{S.x=0;S.v=0;S.t=0;S.hist=[];S.pushOn=false;$("#push").textContent="▶ Kuchni yoqish";$("#push").classList.remove("p")};
+["#sF","#sM","#sU"].forEach(i=>$(i).oninput=()=>drawSim());
+
+/* ---------- Juft kuchlar ---------- */
+function drawJ(){
+  const m1=+$("#sm1").value,m2=+$("#sm2").value;
+  $("#vm1").textContent=m1;$("#vm2").textContent=m2;
+  const F=20;
+  const a1=F/m1,a2=F/m2;
+  $("#jres").innerHTML="F₁₂ = F₂₁ = <b>"+F+" N</b> (3-qonun)<br>a₁ = F/m₁ = <b>"+fmt(a1)+" m/s²</b><br>a₂ = F/m₂ = <b>"+fmt(a2)+" m/s²</b>";
+  const c=$("#cvJ"),g=c.getContext("2d");
+  g.clearRect(0,0,c.width,c.height);
+  const w1=20+m1*4,w2=20+m2*4,x1=150-w1/2-6,x2=150+6;
+  g.fillStyle=cssVar("--ac");g.fillRect(x1-w1/2+50-40,50,w1,40);
+  g.fillStyle=cssVar("--ok");g.fillRect(x2+0,50,w2,40);
+  g.fillStyle=cssVar("--on");g.font="bold 12px system-ui";g.textAlign="center";
+  g.fillText("m₁",x1-w1/2+50-40+w1/2,72);g.fillText("m₂",x2+w2/2,72);g.textAlign="start";
+  // juft kuch strelkalari
+  g.strokeStyle="#d6336c";g.lineWidth=3;
+  g.beginPath();g.moveTo(x1-w1/2+50-40+w1+4,30);g.lineTo(x2-4,30);g.stroke();
+  g.beginPath();g.moveTo(x2-4,30);g.lineTo(x2-12,25);g.moveTo(x2-4,30);g.lineTo(x2-12,35);g.stroke();
+  g.lineWidth=1;g.fillStyle=cssVar("--tx");g.font="11px system-ui";g.fillText("F₁₂",x2-70,22);
+  g.fillStyle=cssVar("--tx");
+  g.fillText("a₁ = "+fmt(a1),10,118);g.fillText("a₂ = "+fmt(a2),190,118);
+}
+["#sm1","#sm2"].forEach(i=>$(i).oninput=drawJ);
+drawJ();
+{const box=$("#jq");[["Birinchi jismning tezlanishi katta",0],["Ikkinchi jismning tezlanishi katta",1],["Teng",0]].forEach(([t,ok],idx)=>{
+  const b=document.createElement("button");b.className="opt";b.textContent=t;
+  b.onclick=()=>{box.querySelectorAll("button").forEach(x=>{x.disabled=true});
+    const m1=+$("#sm1").value,m2=+$("#sm2").value;
+    const right=m1<m2?0:(m1>m2?1:2);
+    if(idx==right){b.classList.add("ok");$("#f3").textContent="✅ To‘g‘ri! Kichik massali jism katta tezlanish oladi (a = F/m).";add("jq",1)}
+    else{b.classList.add("no");$("#f3").textContent="❌ Hozirgi massalar uchun toʻgʻri javob: "+["birinchi jism","ikkinchi jism","teng"][right]+"ning tezlanishi katta (yoki teng)."}};
+  box.append(b)})}
+
+/* ---------- Muhandislik: tormoz ---------- */
+function drawE(){
+  const v=+$("#sv").value,s=+$("#ss").value,m=+$("#smm").value,mu=+$("#smu").value;
+  $("#vv").textContent=v;$("#vs").textContent=s;$("#vmm").textContent=m;$("#vmu").textContent=mu.toFixed(2);
+  const vm=v/3.6,aReq=vm*vm/(2*s),Freq=m*aReq,Fmax=mu*m*G,ok=Freq<=Fmax,t=vm/aReq;
+  $("#eres").innerHTML="Kerakli tormoz kuchi: <b>"+fmt(Freq)+" N</b><br>Maksimal ishqalanish: <b>"+fmt(Fmax)+" N</b><br>Toʻxtash vaqti: <b>"+fmt(t)+" s</b><br>"+(ok?"<b>✅ Xavfsiz</b>":"<b>❌ Xavfli: masofa yetarli emas</b>");
+  const c=$("#cvE"),g=c.getContext("2d");
+  g.clearRect(0,0,c.width,c.height);
+  g.strokeStyle=cssVar("--bd");g.beginPath();g.moveTo(10,100);g.lineTo(290,100);g.stroke();
+  const L=Math.min(260,s*2.2);
+  g.fillStyle=cssVar("--ac");g.fillRect(20,62,40,28);
+  g.strokeStyle="#d6336c";g.lineWidth=2;g.beginPath();g.moveTo(20,50);g.lineTo(20+L,50);g.stroke();
+  g.lineWidth=1;g.fillStyle=cssVar("--tx");g.font="11px system-ui";g.fillText("s = "+s+" m",20+L/2-18,44);
+  g.fillText("v = "+v+" km/s",8,118);
+}
+["#sv","#ss","#smm","#smu"].forEach(i=>$(i).oninput=drawE);
+drawE();
+$("#echk").onclick=()=>{const v=parseFloat($("#eans").value),f=$("#ef");
+  if(isNaN(v)){f.textContent="Avval javobni kiriting.";return}
+  if(Math.abs(v-28.6)<0.5){f.textContent="✅ To‘g‘ri! s = v²/(2μg) = 20²/(2·0,7·10) ≈ 28,6 m. +2 ⭐";add("eng",2);P.eng=true;saveP()}
+  else f.textContent="❌ Qayta tekshiring: v ni m/s ga aylantiring va s = v²/(2μg) formulasini qoʻllang."};
+
+/* ---------- Matematika ---------- */
+$("#cc1").onclick=()=>{const v=parseFloat($("#c1").value),f=$("#fc1");
+  if(isNaN(v)){f.textContent="Qiymat kiriting.";return}
+  if(Math.abs(v-3600)<1e-6){f.textContent="✅ To‘g‘ri! F = 1200 · 3 = 3600 N. +2 ⭐";add("c1",2);P.calc=(P.calc|0)+1;saveP()}
+  else f.textContent="❌ F = m·a. Massani kilogrammda oling."};
+$("#cc2").onclick=()=>{const v=parseFloat($("#c2").value),f=$("#fc2");
+  if(isNaN(v)){f.textContent="Qiymat kiriting.";return}
+  if(Math.abs(v-50)<1e-6){f.textContent="✅ To‘g‘ri! s = 20² / (2·4) = 50 m. +2 ⭐";add("c2",2);P.calc=(P.calc|0)+1;saveP()}
+  else f.textContent="❌ s = v²/(2a). v² ni hisoblang, keyin 2a ga boʻling."};
+
+/* ---------- Test ---------- */
+const Q=[
+["Nyutonning 1-qonuni (inersiya) nimani tasdiqlaydi?",["Tezlanish kuchga teskari","Taʼsir boʻlmasa jism tinch yoki tekis harakatda qoladi","Har ta’sirga teng qarshi ta’sir","F = m·a"],1,"Inersiya qonuni: tashqi kuch boʻlmasa, tezlik oʻzgarmaydi."],
+["F = m·a formulasida a nima?",["Tezlik","Tezlanish","Yoʻl","Massa"],1,"a — tezlanish (m/s²)."],
+["Ta’sir va aks ta’sir kuchlari qanday?",["Bir jismga qoʻyilgan ikki kuch","Ikki jismga qoʻyilgan teng va qarama-qarshi kuchlar","Har doim nolga teng","Faqat tortishish kuchi"],1,"3-qonun: ikki jismga qoʻyilgan kuchlar teng va qarama-qarshi."],
+["Massa 2 marta ortsa, kuch oʻzgarmasa, tezlanish?",["2 marta ortadi","2 marta kamayadi","Oʻzgarmaydi","4 marta ortadi"],1,"a = F/m, demak massa 2 marta ortsa, tezlanish 2 marta kamayadi."],
+["m = 5 kg jismning og‘irligi (g = 10 m/s²)?",["5 N","50 N","500 N","0,5 N"],1,"P = m·g = 5 · 10 = 50 N."],
+["Ishqalanish kuchi nimaga bogʻliq?",["Tezlikka","Tayanch reaksiyasiga va ishqalanish koeffitsiyentiga","Rangga","Hajmga"],1,"F = μ·N. N tayanch reaksiya kuchi."],
+["Tormozlash masofasi s = v²/(2a). Tezlik 2 marta ortsa, masofa (a oʻzgarmas)?",["2 marta","4 marta","Oʻzgarmaydi","8 marta"],1,"v² ortadi, shuning uchun masofa 4 marta ortadi."],
+["Kosmik kemadagi (vaznsiz) jismlar uchun Nyuton qonunlari amal qiladimi?",["Yoʻq","Ha, qonunlar har doim amal qiladi","Faqat Yerda","Faqat massasiz jismlarda"],1,"Nyuton qonunlari barcha inersial sanoq sistemalarida amal qiladi."]
+];
+let qi=0,sc=0;
+function ask(){const q=Q[qi];$("#pb").style.width=(qi/Q.length*100)+"%";$("#qn").textContent="Savol "+(qi+1)+" / "+Q.length;$("#qt").textContent=q[0];$("#f5").textContent="";$("#nx").hidden=true;
+  const o=$("#qo");o.textContent="";
+  q[1].forEach((t,i)=>{const b=document.createElement("button");b.className="opt";b.textContent=t;
+    b.onclick=()=>{o.querySelectorAll("button").forEach((x,j)=>{x.disabled=true;if(j==q[2])x.classList.add("ok")});
+      if(i==q[2]){sc++;$("#f5").textContent="✅ To‘g‘ri! "+q[3]}else{b.classList.add("no");$("#f5").textContent="❌ "+q[3]}
+      $("#nx").hidden=false;$("#nx").textContent=qi==Q.length-1?"Natijani ko‘rish":"Keyingisi ➜"};
+    o.append(b)})}
+$("#nx").onclick=()=>{if(++qi<Q.length)return ask();
+  $("#pb").style.width="100%";$("#qo").textContent="";$("#qn").textContent="";
+  $("#qt").textContent="Natija: "+sc+" / "+Q.length+(sc>=7?" 🏆 Ajoyib!":sc>=5?" 👍 Yaxshi!":" 💪 Mavzuni qayta oʻqing");
+  $("#f5").textContent="";$("#nx").hidden=true;
+  if(P&&P.quiz===null)P.quiz=sc;
+  add("quiz",sc>=7?3:sc>=5?2:1);saveP()};
+
+/* ---------- O'yin ---------- */
+const PAIRS=[["1-qonun","Taʼsir boʻlmasa, tezlik oʻzgarmaydi"],["2-qonun","F = m·a"],["3-qonun","Ta’sir va aks ta’sir teng va qarama-qarshi"],["Ishqalanish","Harakatga qarshi yoʻnalgan kuch"]];
+let sel=null,found=0;
+function pairs(){found=0;sel=null;$("#f6").textContent="";
+  const L=sh(PAIRS.map(p=>p[0])),R=sh(PAIRS.map(p=>p[1]));
+  const box=$("#pr");box.innerHTML="";
+  const cl=document.createElement("div"),cr=document.createElement("div");
+  L.forEach(t=>{const b=document.createElement("button");b.textContent=t;b.dataset.side="L";b.dataset.k=t;cl.append(b)});
+  R.forEach(t=>{const b=document.createElement("button");b.textContent=t;b.dataset.side="R";b.dataset.k=t;cr.append(b)});
+  box.append(cl,cr);
+  box.onclick=e=>{const b=e.target.closest("button");if(!b||b.disabled)return;
+    if(b.dataset.side=="L"){box.querySelectorAll("[data-side=L]").forEach(x=>x.classList.remove("on"));b.classList.add("on");sel=b;return}
+    if(!sel){$("#f6").textContent="Avval chap tomondan tushunchani tanlang";return}
+    const ok=PAIRS.some(p=>p[0]==sel.dataset.k&&p[1]==b.dataset.k);
+    if(ok){sel.classList.remove("on");sel.classList.add("ok");b.classList.add("ok");sel.disabled=true;b.disabled=true;found++;
+      $("#f6").textContent="✅ To‘g‘ri juftlik! +1 ⭐";
+      if(P){P.pairs=Math.max(P.pairs,found);add("pair"+found+"_"+Math.random().toString(36).slice(2,6),1);saveP()}
+      if(found==PAIRS.length)$("#f6").textContent="🏆 Barakalla! Hammasi toʻgʻri topildi.";sel=null}
+    else{const s=sel;s.classList.remove("on");b.classList.add("no");s.classList.add("no");setTimeout(()=>{s.classList.remove("no");b.classList.remove("no")},600);$("#f6").textContent="❌ Boshqa taʼrifni tanlang";sel=null}
+  }}
+$("#rp").onclick=pairs;pairs();
+
+/* ---------- Mashq holatini tiklash ---------- */
+function resetPractice(){qi=0;sc=0;ask();pairs();$("#rsm").textContent="";
+  $("#eans").value="";$("#ef").textContent="";$("#c1").value="";$("#fc1").textContent="";$("#c2").value="";$("#fc2").textContent="";
+  S.x=0;S.v=0;S.t=0;S.hist=[];S.pushOn=false;$("#push").textContent="▶ Kuchni yoqish";$("#push").classList.remove("p");drawSim()}
+
+/* ---------- Natijani yuborish ---------- */
+const LOCAL_ALL="nk_all";
+function payload(){return{key:ME.key,familiya:ME.fam,ism:ME.ism,ball:P.stars,
+  test:P.quiz===null?"—":P.quiz+"/"+TOTAL_Q,muhandislik:P.eng?"✅":"❌",
+  oyin:P.pairs+"/"+TOTAL_P,hisob:(P.calc||0)+"/2",sana:new Date().toLocaleString("uz-UZ")}}
+function refreshSubmitUI(){
+  if(!ME||!P)return;
+  const b=$("#sub");
+  if(P.saved){b.disabled=true;b.textContent="✅ Natija saqlangan";$("#subst").textContent="Natijangiz jadvalda. Qayta yuborib boʻlmaydi."}
+  else{b.disabled=false;b.textContent="📤 Natijani yuborish";$("#subst").textContent=""}
+}
+$("#sub").onclick=async()=>{
+  if(!ME||!P||P.saved)return;
+  const b=$("#sub");b.disabled=true;$("#subst").textContent="Yuborilmoqda…";
+  const d=payload();let msg="";
+  try{
+    if(RESULTS_URL){
+      const r=await fetch(RESULTS_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)});
+      const j=await r.json();
+      if(!j.ok)throw new Error(j.msg||"Server xatosi");
+      P.saved=true;
+      msg=j.saved===false?"ℹ️ "+j.msg+". Yangi urinish saqlanmaydi.":"✅ Saqlandi";
+    }else{
+      let all=[];try{all=JSON.parse(localStorage.getItem(LOCAL_ALL))||[]}catch(e){}
+      if(all.some(x=>x.key==ME.key)){P.saved=true;msg="ℹ️ Bu oʻquvchi natijasi allaqachon saqlangan."}
+      else{all.push(d);localStorage.setItem(LOCAL_ALL,JSON.stringify(all));P.saved=true;msg="✅ Saqlandi (faqat shu qurilmada)"}
+    }
+  }catch(e){
+    b.disabled=false;$("#subst").textContent="❌ Yuborishda xato: "+e.message+". Internetni tekshirib, qayta urinib koʻring.";return
+  }
+  saveP();refreshSubmitUI();$("#subst").textContent=msg;
+};
+
+/* ---------- Natijalar jadvali ---------- */
+async function loadRes(){
+  const note=$("#rnote"),tb=$("#rtab tbody");
+  tb.textContent="";
+  let rows=[];
+  try{
+    if(RESULTS_URL){
+      const r=await fetch(RESULTS_URL);const j=await r.json();rows=j.rows||[];
+      note.textContent="Barcha oʻquvchilarning birinchi natijalari. Jami: "+rows.length+" ta.";
+    }else{
+      try{rows=JSON.parse(localStorage.getItem(LOCAL_ALL))||[]}catch(e){rows=[]}
+      note.textContent="⚠️ Serverga ulanish sozlanmagan: bu yerda faqat shu qurilmadagi natijalar koʻrinadi. GitHub uchun RESULTS_URL ni kiriting.";
+    }
+  }catch(e){note.textContent="❌ Natijalarni yuklab boʻlmadi: "+e.message;return}
+  rows.forEach((x,i)=>{
+    const tr=document.createElement("tr");
+    [i+1,x.familiya,x.ism,x.ball,x.test,x.muhandislik,x.oyin,x.hisob,x.sana].forEach(v=>{const td=document.createElement("td");td.textContent=v==null?"":String(v);tr.append(td)});
+    tb.append(tr);
+  });
+  if(!rows.length){const tr=document.createElement("tr");const td=document.createElement("td");td.colSpan=9;td.textContent="Hali natija yoʻq";tr.append(td);tb.append(tr)}
+}
+$("#rload").onclick=loadRes;
+
+/* ---------- Mashq qayta boshlash (natija saqlanmaydi) ---------- */
+$("#rs").onclick=()=>{
+  if(!ME||!P)return;
+  P.stars=0;P.done={};
+  saveP();updStars();resetPractice();
+  $("#rsm").textContent=P.saved?"ℹ️ Mashq qayta boshlandi. Natijangiz oʻzgarmaydi: birinchi natija allaqachon saqlangan.":"ℹ️ Mashq qayta boshlandi.";
+  go(0);
+};
+
+/* ---------- Animatsiya sikli (simulyator) ---------- */
+let lastTs=0;
+function loop(ts){
+  const dt=lastTs?Math.min(0.05,(ts-lastTs)/1000):0;lastTs=ts;
+  if(ME&&curSec==2){simStep(dt);drawSim()}
+  requestAnimationFrame(loop);
+}
+drawSim();
+requestAnimationFrame(loop);
+</script>
+</body></html>
